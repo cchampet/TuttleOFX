@@ -390,7 +390,6 @@ static PropertyDescription gPluginDescriptorProps[] = {
     PropertyDescription(kOfxImageEffectPluginPropFieldRenderTwiceAlways, OFX::eInt, 1, eDescDefault, 1, eDescFinished),
     PropertyDescription(kOfxImageEffectPropSupportsMultipleClipDepths, OFX::eInt, 1, eDescDefault, 0, eDescFinished),
     PropertyDescription(kOfxImageEffectPropSupportsMultipleClipPARs, OFX::eInt, 1, eDescDefault, 0, eDescFinished),
-    PropertyDescription(kTuttleOfxImageEffectPropEvaluation, OFX::eDouble, 1, eDescDefault, -1, eDescFinished),
 
     // Pointer props with defaults that can be checked against
     PropertyDescription(kOfxImageEffectPluginPropOverlayInteractV1, OFX::ePointer, 1, eDescDefault, (void*)(0),
@@ -399,8 +398,11 @@ static PropertyDescription gPluginDescriptorProps[] = {
     // string props that have variable dimension, and can't be checked against for defaults
     PropertyDescription(kOfxImageEffectPropSupportedContexts, OFX::eString, -1, eDescFinished),
     PropertyDescription(kOfxImageEffectPropSupportedPixelDepths, OFX::eString, -1, eDescFinished),
-    PropertyDescription(kTuttleOfxImageEffectPropSupportedExtensions, OFX::eString, -1, eDescFinished),
     PropertyDescription(kOfxImageEffectPropClipPreferencesSlaveParam, OFX::eString, -1, eDescFinished),
+
+    // custom Tuttle properties
+    PropertyDescription(kTuttleOfxImageEffectPropEvaluation, OFX::eDouble, 1, eDescDefault, -1, eDescFinished),
+    PropertyDescription(kTuttleOfxImageEffectPropSupportedExtensions, OFX::eString, -1, eDescFinished),
 };
 
 /** @brief the property set for the global plugin descriptor */
